@@ -9,7 +9,7 @@ function Search() {
         placeholder="Search Github username..."
         className="w-[100%]  "
       />
-      <button className="text-[14px] text-[#FFF] bg-[#0079FF] rounded-[10px] p-4  w-[84px]  h-[46px]  flex justify-center items-center">
+      <button className="text-[14px] text-[#FFF] bg-[#0079FF] rounded-[10px] p-4  w-[84px]  h-[46px]  flex justify-center items-center tracking-[0.5px]">
         Search
       </button>
     </div>
