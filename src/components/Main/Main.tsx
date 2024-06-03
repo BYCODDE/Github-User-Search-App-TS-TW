@@ -39,9 +39,9 @@ function Main() {
           <img src="images/icon-website.svg" alt="website_svg" />
           <p className="text-[#4B6A9B] font-[400]">www.github.com/octocat</p>
         </div>
-        <div className="flex gap-[20px] items-center ">
+        <div className="flex gap-[20px] items-center opacity-[0.5]">
           <img src="images/icon-twitter.svg" alt="twitter_svg" />
-          <p className="text-[#4B6A9B] font-[400]">@octocat</p>
+          <p className="text-[#4B6A9B] font-[400]">Not Available</p>
         </div>
         <div className="flex gap-[20px] items-center ">
           <img src="images/icon-company.svg" alt="company_svg" />
