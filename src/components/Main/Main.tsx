@@ -30,6 +30,24 @@ function Main() {
           </div>
         </div>
       </div>
+      <div className="flex flex-col items-start  gap-[7px]">
+        <div className="flex gap-[20px] items-center ml-[4px] ">
+          <img src="images/icon-location.svg" alt="location_svg" />
+          <p className="text-[#4B6A9B] font-[400]">San Francisco</p>
+        </div>
+        <div className="flex gap-[20px] items-center ">
+          <img src="images/icon-website.svg" alt="website_svg" />
+          <p className="text-[#4B6A9B] font-[400]">www.github.com/octocat</p>
+        </div>
+        <div className="flex gap-[20px] items-center ">
+          <img src="images/icon-twitter.svg" alt="twitter_svg" />
+          <p className="text-[#4B6A9B] font-[400]">@octocat</p>
+        </div>
+        <div className="flex gap-[20px] items-center ">
+          <img src="images/icon-company.svg" alt="company_svg" />
+          <p className="text-[#4B6A9B] font-[400]">@github</p>
+        </div>
+      </div>
     </main>
   );
 }
