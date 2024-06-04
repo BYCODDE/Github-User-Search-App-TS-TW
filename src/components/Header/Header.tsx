@@ -1,6 +1,13 @@
 import Search from "../Search/Search";
+import { dataTypes } from "../../App";
 
-function Header({ toggleDarkMode, darkMode }) {
+type HeaderProps = {
+  toggleDarkMode: () => void;
+  darkMode: boolean;
+  data: dataTypes | null;
+};
+
+function Header({ toggleDarkMode, darkMode, data }: HeaderProps) {
   return (
     <header className="">
       <div className="flex items-center text-center mb-[53px] justify-between">
@@ -14,7 +21,7 @@ function Header({ toggleDarkMode, darkMode }) {
         </div>
       </div>
 
-      <Search />
+      <Search data={data} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
     </header>
   );
 }
