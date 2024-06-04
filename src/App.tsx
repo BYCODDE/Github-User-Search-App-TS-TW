@@ -12,10 +12,10 @@ const toggleDarkMode = () => {
 }
 
   return (
-    <div className={`app ${darkMode ? "dark" : ""} `} style={{backgroundColor: darkMode ? 'black' : 'white',}}>
+    <> 
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Main darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-    </div>
+    </>
   );
 }
 
