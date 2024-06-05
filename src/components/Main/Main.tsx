@@ -54,7 +54,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             darkMode ? "  bg-[#141D2F]  " : " bg-[#F6F8FF] "
-          } flex justify-center items-center rounded-[10px] p-[15px] gap-[20px] mt-[23px] mb-[24px] text-[16px]`}
+          } flex justify-center items-center rounded-[10px] p-[15px] gap-[25px] mt-[23px] mb-[24px] text-[16px]`}
         >
           <div className="flex flex-col">
             <span
