@@ -6,7 +6,7 @@ type MainProps = {
   data: dataTypes | null;
 };
 function Main({ darkMode, toggleDarkMode, data }: MainProps) {
-  const formatDate = (dateString:string) => {
+  const formatDate = (dateString:string | undefined) => {
     const formattedDate = dateFormat(dateString, "d mmm yyyy");
     return `Joined ${formattedDate}`;
   };
