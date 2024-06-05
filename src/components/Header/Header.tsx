@@ -5,9 +5,18 @@ type HeaderProps = {
   toggleDarkMode: () => void;
   darkMode: boolean;
   data: dataTypes | null;
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  Username: string;
+  setUsername: React.Dispatch<React.SetStateAction<string>>;
 };
 
-function Header({ toggleDarkMode, darkMode, data }: HeaderProps) {
+function Header({
+  toggleDarkMode,
+  darkMode,
+  data,
+  Username,
+  setUsername,
+}: HeaderProps) {
   return (
     <header className="">
       <div className="flex items-center text-center mb-[53px] justify-between">
@@ -21,7 +30,13 @@ function Header({ toggleDarkMode, darkMode, data }: HeaderProps) {
         </div>
       </div>
 
-      <Search data={data} darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Search
+        data={data}
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+        Username={Username}
+        setUsername={setUsername}
+      />
     </header>
   );
 }
