@@ -36,21 +36,47 @@ function Main({ darkMode, toggleDarkMode, data }  : MainProps) {
         </div>
       </div>
       <div className="flex flex-col items-start  gap-[7px]">
-        <div className="flex gap-[20px] items-center ml-[4px] ">
+        <div
+          className={`${
+            data?.location === null ? "opacity-[0.5]" : ""
+          } flex gap-[20px] items-center`}
+        >
           <img src="images/icon-location.svg" alt="location_svg" />
-          <p className="text-[#4B6A9B] font-[400]">{data?.location}</p>
+          <p className="text-[#4B6A9B] font-[400]">
+            {data?.location === null ? "Not Available" : data?.location}
+          </p>
         </div>
-        <div className="flex gap-[20px] items-center ">
+        <div
+          className={`${
+            data?.blog === "" ? "opacity-[0.5]" : ""
+          } flex gap-[20px] items-center`}
+        >
           <img src="images/icon-website.svg" alt="website_svg" />
-          <p className="text-[#4B6A9B] font-[400]">{data?.blog}</p>
+          <p className="text-[#4B6A9B] font-[400]">
+            {data?.blog === "" ? "Not Available" : data?.blog}
+          </p>
         </div>
-        <div className="flex gap-[20px] items-center opacity-[0.5]">
+        <div
+          className={`${
+            data?.twitter_username === null ? "opacity-[0.5]" : ""
+          } flex gap-[20px] items-center`}
+        >
           <img src="images/icon-twitter.svg" alt="twitter_svg" />
-          <p className="text-[#4B6A9B] font-[400]">{data?.twitter_username}</p>
+          <p className="text-[#4B6A9B] font-[400]">
+            {data?.twitter_username === null
+              ? "Not Available"
+              : data?.twitter_username}
+          </p>
         </div>
-        <div className="flex gap-[20px] items-center ">
+        <div
+          className={`${
+            data?.company === null ? "opacity-[0.5]" : ""
+          } flex gap-[20px] items-center`}
+        >
           <img src="images/icon-company.svg" alt="company_svg" />
-          <p className="text-[#4B6A9B] font-[400]">{data?.company}</p>
+          <p className="text-[#4B6A9B] font-[400]">
+            {data?.company === null ? "Not Available" : data?.company}
+          </p>
         </div>
       </div>
     </main>
