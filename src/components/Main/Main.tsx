@@ -12,13 +12,28 @@ function Main({ darkMode, data }: MainProps) {
   };
 
   return (
-    <main className="rounded-[15px] bg-[#FEFEFE] shadow-custom p-[24px]">
+    <main
+      className={`${
+        darkMode ? "bg-[#1E2A47]  " : "bg-[#FEFEFE] shadow-custom  "
+      } rounded-[15px]   p-[24px] `}
+    >
       <div className="flex justify-start	 text-left	items-center	 gap-[20px]">
-        <img src="./images/avatar.svg" alt="avatar" />
+        <img className="rounded-full w-[70px] h-[70px]" src={data?.avatar_url} alt="avatar" />
+
         <div>
-          <h2 className="text-[#2B3442] text-[16px]">{data?.name}</h2>
+          <h2
+            className={`${
+              darkMode ? "  text-[#FFF]  " : " text-[#2B3442] "
+            } text-[16px] `}
+          >
+            {data?.name}
+          </h2>
           <h3 className="font-[400] text-[#0079FF]">@{data?.login}</h3>
-          <h3 className="font-[400] text-[#697C9A]">
+          <h3
+            className={`${
+              darkMode ? "  text-[#FFF]  " : " text-[#697C9A] "
+            } font-[400]`}
+          >
             {formatDate(data?.created_at)}
           </h3>
         </div>
