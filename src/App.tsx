@@ -31,15 +31,12 @@ export type dataTypes = {
   type: string;
   site_admin: boolean;
   darkMode: boolean;
-
 };
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [data, setData] = useState<dataTypes | null>(null);
   const [Username, setUsername] = useState<string>("BYCODDE");
-
-
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -56,7 +53,11 @@ function App() {
   }, []);
 
   return (
-    <div className="w-screen h-screen p-[24px]  bg-[#F6F8FF]">
+    <div
+      className={`${
+        darkMode ? "bg-[#141D2F]" : "bg-[#F6F8FF]"
+      } w-screen h-screen p-[24px] `}
+    >
       <Header
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
