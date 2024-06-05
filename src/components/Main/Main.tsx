@@ -18,7 +18,11 @@ function Main({ darkMode, data }: MainProps) {
       } rounded-[15px]   p-[24px] `}
     >
       <div className="flex justify-start	 text-left	items-center	 gap-[20px]">
-        <img className="rounded-full w-[70px] h-[70px]" src={data?.avatar_url} alt="avatar" />
+        <img
+          className="rounded-full w-[70px] h-[70px]"
+          src={data?.avatar_url}
+          alt="avatar"
+        />
 
         <div>
           <h2
@@ -39,21 +43,66 @@ function Main({ darkMode, data }: MainProps) {
         </div>
       </div>
       <div className="flex justify-center items-center flex-col">
-        <p className="text-[#4B6A9B] font-[400] leading-[25px] mt-[34px]">
+        <p
+          className={`${
+            darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
+          } font-[400] leading-[25px] mt-[34px] `}
+        >
           {data?.bio}
         </p>
-        <div className="flex justify-center items-center rounded-[10px] bg-[#F6F8FF]  p-[15px] gap-[20px] mt-[23px] mb-[24px]">
+
+        <div
+          className={`${
+            darkMode ? "  bg-[#141D2F]  " : " bg-[#F6F8FF] "
+          } flex justify-center items-center rounded-[10px] p-[15px] gap-[20px] mt-[23px] mb-[24px] text-[16px]`}
+        >
           <div className="flex flex-col">
-            <span className="text-[#4B6A9B] font-[400]">Repos</span>
-            <span>{data?.public_repos}</span>
+            <span
+              className={`${
+                darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
+              } font-[400]  text-[11px]`}
+            >
+              Repos
+            </span>
+            <span
+              className={`${
+                darkMode ? "  text-[#FFF]  " : " text-[#2B3442] "
+              }  `}
+            >
+              {data?.public_repos}
+            </span>
           </div>
           <div className="flex flex-col">
-            <span className="text-[#4B6A9B] font-[400]">Followers</span>
-            <span>{data?.followers}</span>
+            <span
+              className={`${
+                darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
+              } font-[400]  text-[11px]`}
+            >
+              Followers
+            </span>
+            <span
+              className={`${
+                darkMode ? "  text-[#FFF]  " : " text-[#2B3442] "
+              }  `}
+            >
+              {data?.followers}
+            </span>
           </div>
           <div className="flex flex-col">
-            <span className="text-[#4B6A9B] font-[400]">Following</span>
-            <span>{data?.following}</span>
+            <span
+              className={`${
+                darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
+              } font-[400]  text-[11px]`}
+            >
+              Following
+            </span>
+            <span
+              className={`${
+                darkMode ? "  text-[#FFF]  " : " text-[#2B3442] "
+              }  `}
+            >
+              {data?.following}
+            </span>
           </div>
         </div>
       </div>
