@@ -14,7 +14,6 @@ function Header({
   toggleDarkMode,
   darkMode,
   data,
-  Username,
   setUsername,
 }: HeaderProps) {
   return (
@@ -34,7 +33,6 @@ function Header({
         data={data}
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
-        Username={Username}
         setUsername={setUsername}
       />
     </header>
