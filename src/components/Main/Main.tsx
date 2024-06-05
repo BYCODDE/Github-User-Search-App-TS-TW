@@ -1,55 +1,60 @@
+import { dataTypes } from "../../App";
 
-function Main() {
+type MainProps = {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+  data: dataTypes | null;
+}
+function Main({ darkMode, toggleDarkMode, data }  : MainProps) {
   return (
     <main className="rounded-[15px] bg-[#FEFEFE] shadow-custom p-[24px]">
       <div className="flex justify-start	 text-left	items-center	 gap-[20px]">
         <img src="./images/avatar.svg" alt="avatar" />
         <div>
-          <h2 className="text-[#2B3442] text-[16px]">The Octocat</h2>
-          <h3 className="font-[400] text-[#0079FF]">@octocat</h3>
-          <h3 className="font-[400] text-[#697C9A]">Joined 25 Jan 2011</h3>
+          <h2 className="text-[#2B3442] text-[16px]">{data?.name}</h2>
+          <h3 className="font-[400] text-[#0079FF]">@{data?.login}</h3>
+          <h3 className="font-[400] text-[#697C9A]">{data?.created_at}</h3>
         </div>
       </div>
       <div className="flex justify-center items-center flex-col">
         <p className="text-[#4B6A9B] font-[400] leading-[25px] mt-[34px]">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          Quisque volutpat mattis eros.
+          {data?.bio}
         </p>
         <div className="flex justify-center items-center rounded-[10px] bg-[#F6F8FF]  p-[15px] gap-[20px] mt-[23px] mb-[24px]">
           <div className="flex flex-col">
             <span className="text-[#4B6A9B] font-[400]">Repos</span>
-            <span>8</span>
+            <span>{data?.public_repos}</span>
           </div>
           <div className="flex flex-col">
             <span className="text-[#4B6A9B] font-[400]">Followers</span>
-            <span>3938</span>
+            <span>{data?.followers}</span>
           </div>
           <div className="flex flex-col">
             <span className="text-[#4B6A9B] font-[400]">Following</span>
-            <span>9</span>
+            <span>{data?.following}</span>
           </div>
         </div>
       </div>
       <div className="flex flex-col items-start  gap-[7px]">
         <div className="flex gap-[20px] items-center ml-[4px] ">
           <img src="images/icon-location.svg" alt="location_svg" />
-          <p className="text-[#4B6A9B] font-[400]">San Francisco</p>
+          <p className="text-[#4B6A9B] font-[400]">{data?.location}</p>
         </div>
         <div className="flex gap-[20px] items-center ">
           <img src="images/icon-website.svg" alt="website_svg" />
-          <p className="text-[#4B6A9B] font-[400]">www.github.com/octocat</p>
+          <p className="text-[#4B6A9B] font-[400]">{data?.blog}</p>
         </div>
         <div className="flex gap-[20px] items-center opacity-[0.5]">
           <img src="images/icon-twitter.svg" alt="twitter_svg" />
-          <p className="text-[#4B6A9B] font-[400]">Not Available</p>
+          <p className="text-[#4B6A9B] font-[400]">{data?.twitter_username}</p>
         </div>
         <div className="flex gap-[20px] items-center ">
           <img src="images/icon-company.svg" alt="company_svg" />
-          <p className="text-[#4B6A9B] font-[400]">@github</p>
+          <p className="text-[#4B6A9B] font-[400]">{data?.company}</p>
         </div>
       </div>
     </main>
   );
 }
 
-export default Main
+export default Main;

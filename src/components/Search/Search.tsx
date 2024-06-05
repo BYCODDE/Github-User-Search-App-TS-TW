@@ -1,4 +1,13 @@
-function Search() {
+import { dataTypes } from "../../App";
+
+type SearchProps = {
+  toggleDarkMode: () => void;
+  darkMode: boolean;
+  data: dataTypes | null;
+};
+
+
+function Search({ toggleDarkMode, darkMode, data }: SearchProps) {
   return (
     <div className=" mb-[16px] flex justify-center items-center gap-[8px] rounded-[15px] bg-[#FEFEFE] shadow-custom py-[7px] pr-[7px] pb-[7px] pl-[16px] ">
       <img src="./images/icon-search.svg" alt="icon-search" />
