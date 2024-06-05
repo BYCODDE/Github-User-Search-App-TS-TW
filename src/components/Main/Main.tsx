@@ -1,11 +1,16 @@
 import { dataTypes } from "../../App";
-
+import dateFormat from "dateformat";
 type MainProps = {
   darkMode: boolean;
   toggleDarkMode: () => void;
   data: dataTypes | null;
-}
-function Main({ darkMode, toggleDarkMode, data }  : MainProps) {
+};
+function Main({ darkMode, toggleDarkMode, data }: MainProps) {
+  const formatDate = (dateString:string) => {
+    const formattedDate = dateFormat(dateString, "d mmm yyyy");
+    return `Joined ${formattedDate}`;
+  };
+
   return (
     <main className="rounded-[15px] bg-[#FEFEFE] shadow-custom p-[24px]">
       <div className="flex justify-start	 text-left	items-center	 gap-[20px]">
@@ -13,7 +18,9 @@ function Main({ darkMode, toggleDarkMode, data }  : MainProps) {
         <div>
           <h2 className="text-[#2B3442] text-[16px]">{data?.name}</h2>
           <h3 className="font-[400] text-[#0079FF]">@{data?.login}</h3>
-          <h3 className="font-[400] text-[#697C9A]">{data?.created_at}</h3>
+          <h3 className="font-[400] text-[#697C9A]">
+            {formatDate(data?.created_at)}
+          </h3>
         </div>
       </div>
       <div className="flex justify-center items-center flex-col">

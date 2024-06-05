@@ -13,7 +13,7 @@ function Search({ toggleDarkMode, darkMode, data, setUsername }: SearchProps) {
   };
 
   const handleSearch = () => {
-    // Implement search logic here
+    
     console.log("Searching...");
   };
 
