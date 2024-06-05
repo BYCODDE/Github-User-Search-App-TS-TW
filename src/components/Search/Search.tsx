@@ -1,12 +1,12 @@
-import { dataTypes } from "../../App";
+// import { dataTypes } from "../../App";
 
 type SearchProps = {
   darkMode: boolean;
-  data: dataTypes | null;
+  // data: dataTypes | null;
   setUsername: React.Dispatch<React.SetStateAction<string>>;
 };
 
-function Search({ darkMode, data, setUsername }: SearchProps) {
+function Search({ darkMode,  setUsername }: SearchProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
   };

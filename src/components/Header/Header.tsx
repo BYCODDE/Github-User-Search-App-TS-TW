@@ -1,15 +1,15 @@
 import Search from "../Search/Search";
-import { dataTypes } from "../../App";
+// import { dataTypes } from "../../App";
 
 type HeaderProps = {
   toggleDarkMode: () => void;
   darkMode: boolean;
-  data: dataTypes | null;
+  // data: dataTypes | null;
   Username: string;
   setUsername: React.Dispatch<React.SetStateAction<string>>;
 };
 
-function Header({ toggleDarkMode, darkMode, data, setUsername }: HeaderProps) {
+function Header({ toggleDarkMode, darkMode,  setUsername }: HeaderProps) {
   return (
     <header className="">
       <div className="flex items-center text-center mb-[53px] justify-between">
@@ -40,7 +40,7 @@ function Header({ toggleDarkMode, darkMode, data, setUsername }: HeaderProps) {
         )}
       </div>
 
-      <Search data={data} darkMode={darkMode} setUsername={setUsername} />
+      <Search  darkMode={darkMode} setUsername={setUsername} />
     </header>
   );
 }

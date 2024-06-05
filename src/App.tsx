@@ -61,7 +61,7 @@ function App() {
       <Header
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
-        data={data}
+        // data={data}
         Username={Username}
         setUsername={setUsername}
       />
