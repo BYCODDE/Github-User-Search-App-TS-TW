@@ -26,7 +26,7 @@ function Search({ darkMode, setUsername, handleSearch }: SearchProps) {
           darkMode
             ? "bg-[#1E2A47] placeholder:text-[#FFF] placeholder:opacity-90 "
             : "bg-[#FEFEFE] placeholder:text-[#4B6A9B]  "
-        } w-[100%] placeholder:text-[14px]  placeholder:font-[400] `}
+        } w-[100%] placeholder:text-[14px]  placeholder:font-[400]  focus:outline-none  caret-[#0079FF] appearance-none`}
         onChange={handleChange}
       />
       <button
