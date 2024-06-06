@@ -1,11 +1,13 @@
 import { dataTypes } from "../../App";
 import dateFormat from "dateformat";
+import { useMediaQuery } from "@uidotdev/usehooks";
 type MainProps = {
   darkMode: boolean;
   toggleDarkMode: () => void;
   data: dataTypes | null;
 };
 function Main({ darkMode, data }: MainProps) {
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
   const formatDate = (dateString: string | undefined) => {
     const formattedDate = dateFormat(dateString, "d mmm yyyy");
     return `Joined ${formattedDate}`;
@@ -112,7 +114,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.location === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center  md:justify-center md:text-[15px]`}
+          } flex gap-[20px] items-center  md:justify-center md:text-[15px] xl:ml-[10px]`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}
@@ -128,44 +130,90 @@ function Main({ darkMode, data }: MainProps) {
             {data?.location === null ? "Not Available" : data?.location}
           </p>
         </div>
-        <div
-          className={`${
-            data?.blog === "" ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center  md:justify-center md:text-[15px]`}
-        >
-          <img
-            className={darkMode ? "filtered-element" : ""}
-            src="images/icon-website.svg"
-            alt="website_svg"
-          />
-          <p
-            className={`${
-              darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
-            }  font-[400]`}
-          >
-            {data?.blog === "" ? "Not Available" : data?.blog}
-          </p>
-        </div>
-        <div
-          className={`${
-            data?.twitter_username === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center  md:justify-center md:text-[15px]`}
-        >
-          <img
-            className={darkMode ? "filtered-element" : ""}
-            src="images/icon-twitter.svg"
-            alt="twitter_svg"
-          />
-          <p
-            className={`${
-              darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
-            }  font-[400]`}
-          >
-            {data?.twitter_username === null
-              ? "Not Available"
-              : data?.twitter_username}
-          </p>
-        </div>
+        {isSmallDevice ? (
+          <>
+            <div
+              className={`${
+                data?.blog === "" ? "opacity-[0.5]" : ""
+              } flex gap-[20px] items-center md:justify-center md:text-[15px]`}
+            >
+              <img
+                className={darkMode ? "filtered-element" : ""}
+                src="images/icon-website.svg"
+                alt="website_svg"
+              />
+              <p
+                className={`${
+                  darkMode ? "text-white" : "text-[#4B6A9B]"
+                } font-[400]`}
+              >
+                {data?.blog === "" ? "Not Available" : data?.blog}
+              </p>
+            </div>
+            <div
+              className={`${
+                data?.twitter_username === null ? "opacity-[0.5]" : ""
+              } flex gap-[20px] items-center md:justify-center md:text-[15px]`}
+            >
+              <img
+                className={darkMode ? "filtered-element" : ""}
+                src="images/icon-twitter.svg"
+                alt="twitter_svg"
+              />
+              <p
+                className={`${
+                  darkMode ? "text-white" : "text-[#4B6A9B]"
+                } font-[400]`}
+              >
+                {data?.twitter_username === null
+                  ? "Not Available"
+                  : data?.twitter_username}
+              </p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div
+              className={`${
+                data?.twitter_username === null ? "opacity-[0.5]" : ""
+              } flex gap-[20px] items-center md:justify-center md:text-[15px]`}
+            >
+              <img
+                className={darkMode ? "filtered-element" : ""}
+                src="images/icon-twitter.svg"
+                alt="twitter_svg"
+              />
+              <p
+                className={`${
+                  darkMode ? "text-white" : "text-[#4B6A9B]"
+                } font-[400]`}
+              >
+                {data?.twitter_username === null
+                  ? "Not Available"
+                  : data?.twitter_username}
+              </p>
+            </div>
+            <div
+              className={`${
+                data?.blog === "" ? "opacity-[0.5]" : ""
+              } flex gap-[20px] items-center md:justify-center md:text-[15px]`}
+            >
+              <img
+                className={darkMode ? "filtered-element" : ""}
+                src="images/icon-website.svg"
+                alt="website_svg"
+              />
+              <p
+                className={`${
+                  darkMode ? "text-white" : "text-[#4B6A9B]"
+                } font-[400]`}
+              >
+                {data?.blog === "" ? "Not Available" : data?.blog}
+              </p>
+            </div>
+          </>
+        )}
+
         <div
           className={`${
             data?.company === null ? "opacity-[0.5]" : ""
