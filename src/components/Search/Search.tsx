@@ -1,24 +1,19 @@
-// import { dataTypes } from "../../App";
-
 type SearchProps = {
   darkMode: boolean;
-  // data: dataTypes | null;
+
   setUsername: React.Dispatch<React.SetStateAction<string>>;
+  handleSearch: () => void;
 };
 
-function Search({ darkMode,  setUsername }: SearchProps) {
+function Search({ darkMode, setUsername, handleSearch }: SearchProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
-  };
-
-  const handleSearch = () => {
-    console.log("Searching...");
   };
 
   return (
     <div
       className={`${
-        darkMode ? "bg-[#1E2A47]" : "bg-[#FEFEFE]"
+        darkMode ? "bg-[#1E2A47] text-[#FFF]" : "bg-[#FEFEFE]"
       } mb-[16px] flex justify-center items-center gap-[8px] rounded-[15px] bg- shadow-custom py-[7px] pr-[7px] pb-[7px] pl-[16px]  `}
     >
       <img src="./images/icon-search.svg" alt="icon-search" />

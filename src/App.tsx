@@ -37,7 +37,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [data, setData] = useState<dataTypes | null>(null);
   const [Username, setUsername] = useState<string>("BYCODDE");
-
+  const [search, setSearch] = useState<boolean>(false);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
@@ -45,12 +45,15 @@ function App() {
     const response = await fetch(`https://api.github.com/users/${Username}`);
     const result = await response.json();
     setData(result);
-    console.log(result);
   }
+
+  const handleSearch = () => {
+    setSearch(!search);
+  };
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [search]);
 
   return (
     <div
@@ -61,9 +64,9 @@ function App() {
       <Header
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
-        // data={data}
         Username={Username}
         setUsername={setUsername}
+        handleSearch={handleSearch}
       />
       <Main darkMode={darkMode} toggleDarkMode={toggleDarkMode} data={data} />
     </div>

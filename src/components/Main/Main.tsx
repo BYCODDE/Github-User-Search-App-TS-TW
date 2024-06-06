@@ -15,7 +15,7 @@ function Main({ darkMode, data }: MainProps) {
     <main
       className={`${
         darkMode ? "bg-[#1E2A47]  " : "bg-[#FEFEFE] shadow-custom  "
-      } rounded-[15px]   py-32 px-24 `}
+      } rounded-[15px]   py-[32px] px-[24px] `}
     >
       <div className="flex justify-start	 text-left	items-center	 gap-[20px]">
         <img
