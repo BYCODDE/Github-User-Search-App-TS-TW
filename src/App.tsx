@@ -59,7 +59,7 @@ function App() {
     <div
       className={`${
         darkMode ? "bg-[#141D2F]" : "bg-[#F6F8FF]"
-      } w-screen h-screen p-[24px] `}
+      } w-screen h-screen p-[24px] md:pt-[140px] md:pr-[98px] md:pb-[236px] md:pl-[97px]`}
     >
       <Header
         darkMode={darkMode}

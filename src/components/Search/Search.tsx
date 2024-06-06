@@ -14,7 +14,7 @@ function Search({ darkMode, setUsername, handleSearch }: SearchProps) {
     <div
       className={`${
         darkMode ? "bg-[#1E2A47] text-[#FFF]" : "bg-[#FEFEFE]"
-      } mb-[16px] flex justify-center items-center gap-[8px] rounded-[15px] bg- shadow-custom py-[7px] pr-[7px] pb-[7px] pl-[16px]  `}
+      } mb-[16px] flex justify-center items-center gap-[8px] rounded-[15px] bg- shadow-custom py-[7px] pr-[7px] pb-[7px] pl-[16px] md:gap-[24px] `}
     >
       <img src="./images/icon-search.svg" alt="icon-search" />
       <input

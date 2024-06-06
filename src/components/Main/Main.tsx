@@ -17,9 +17,9 @@ function Main({ darkMode, data }: MainProps) {
         darkMode ? "bg-[#1E2A47]  " : "bg-[#FEFEFE] shadow-custom  "
       } rounded-[15px]   py-[32px] px-[24px] `}
     >
-      <div className="flex justify-start	 text-left	items-center	 gap-[20px]">
+      <div className="flex justify-start	 text-left	items-center	 gap-[20px] md:gap-[41px]">
         <img
-          className="rounded-full w-[70px] h-[70px]"
+          className="rounded-full w-[70px] h-[70px] md:w-[117px]  md:h-[117px]    "
           src={data?.avatar_url}
           alt="avatar"
         />
@@ -28,15 +28,17 @@ function Main({ darkMode, data }: MainProps) {
           <h2
             className={`${
               darkMode ? "  text-[#FFF]  " : " text-[#2B3442] "
-            } text-[16px] `}
+            } text-[16px] md:text-[26px]`}
           >
             {data?.name}
           </h2>
-          <h3 className="font-[400] text-[#0079FF]">@{data?.login}</h3>
+          <h3 className="font-[400] text-[#0079FF] md:text-[16px]">
+            @{data?.login}
+          </h3>
           <h3
             className={`${
               darkMode ? "  text-[#FFF]  " : " text-[#697C9A] "
-            } font-[400]`}
+            } font-[400]  md:text-[15px]`}
           >
             {formatDate(data?.created_at)}
           </h3>
@@ -46,7 +48,7 @@ function Main({ darkMode, data }: MainProps) {
         <p
           className={`${
             darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
-          } font-[400] leading-[25px] mt-[34px] `}
+          } font-[400] leading-[25px] mt-[34px] md:text-[15px]`}
         >
           {data?.bio}
         </p>
@@ -60,14 +62,14 @@ function Main({ darkMode, data }: MainProps) {
             <span
               className={`${
                 darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
-              } font-[400]  text-[11px]`}
+              } font-[400]  text-[11px] md:text-[13px]`}
             >
               Repos
             </span>
             <span
               className={`${
                 darkMode ? "  text-[#FFF]  " : " text-[#2B3442] "
-              }  `}
+              } md:text-[22px] `}
             >
               {data?.public_repos}
             </span>
@@ -76,14 +78,14 @@ function Main({ darkMode, data }: MainProps) {
             <span
               className={`${
                 darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
-              } font-[400]  text-[11px]`}
+              } font-[400]  text-[11px] md:text-[13px]`}
             >
               Followers
             </span>
             <span
               className={`${
                 darkMode ? "  text-[#FFF]  " : " text-[#2B3442] "
-              }  `}
+              } md:text-[22px] `}
             >
               {data?.followers}
             </span>
@@ -92,14 +94,14 @@ function Main({ darkMode, data }: MainProps) {
             <span
               className={`${
                 darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
-              } font-[400]  text-[11px]`}
+              } font-[400]  text-[11px] md:text-[13px]`}
             >
               Following
             </span>
             <span
               className={`${
                 darkMode ? "  text-[#FFF]  " : " text-[#2B3442] "
-              }  `}
+              } md:text-[22px] `}
             >
               {data?.following}
             </span>
