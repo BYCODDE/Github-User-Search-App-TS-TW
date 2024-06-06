@@ -114,7 +114,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.location === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center  md:justify-center md:text-[15px] xl:ml-[10px]`}
+          } flex gap-[20px] items-center  md:justify-center md:text-[15px] md:ml-[15px]`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}

@@ -27,19 +27,31 @@ function Header({
 
         {darkMode ? (
           <div
-            className="flex justify-center align-center gap-[16px]"
+            className="flex justify-center align-center gap-[16px] cursor-pointer"
             onClick={toggleDarkMode}
           >
-            <h2 className="tracking-[2.5px] text-[#FFF]">LIGHT</h2>
-            <img src="./images/icon-sun.svg" alt="moon_svg" />
+            <h2 className="tracking-[2.5px] text-[#FFF] hover:text-[#90A4D4]">
+              LIGHT
+            </h2>
+            <img
+              className={darkMode ? "filtered-svgTwo" : ""}
+              src="./images/icon-sun.svg"
+              alt="moon_svg"
+            />
           </div>
         ) : (
           <div
-            className="flex justify-center align-center gap-[16px]"
+            className="flex justify-center align-center gap-[16px]  cursor-pointer"
             onClick={toggleDarkMode}
           >
-            <h2 className="tracking-[2.5px] text-[#4B6A9B]">DARK</h2>
-            <img src="./images/icon-moon.svg" alt="moon_svg" />
+            <h2 className="tracking-[2.5px] text-[#4B6A9B] hover:text-[#222731]">
+              DARK
+            </h2>
+            <img
+              className={darkMode ? "" : "filtered-svg"}
+              src="./images/icon-moon.svg"
+              alt="moon_svg"
+            />
           </div>
         )}
       </div>

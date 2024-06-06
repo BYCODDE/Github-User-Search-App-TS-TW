@@ -14,7 +14,7 @@ function Search({ darkMode, setUsername, handleSearch }: SearchProps) {
     <div
       className={`${
         darkMode ? "bg-[#1E2A47] text-[#FFF]" : "bg-[#FEFEFE]"
-      } mb-[16px] flex justify-center items-center gap-[8px] rounded-[15px] bg- shadow-custom py-[7px] pr-[7px] pb-[7px] pl-[16px] md:gap-[24px] `}
+      } mb-[16px] flex justify-center items-center gap-[8px] rounded-[15px] bg- shadow-custom py-[7px] pr-[7px] pb-[7px] pl-[16px] md:gap-[24px] cursor-pointer `}
     >
       <img src="./images/icon-search.svg" alt="icon-search" />
       <input
@@ -30,7 +30,7 @@ function Search({ darkMode, setUsername, handleSearch }: SearchProps) {
         onChange={handleChange}
       />
       <button
-        className="text-[14px] text-[#FFF] bg-[#0079FF] rounded-[10px] p-4  w-[84px]  h-[46px]  flex justify-center items-center tracking-[0.5px]"
+        className="text-[14px] text-[#FFF] bg-[#0079FF] rounded-[10px] p-4  w-[84px]  h-[46px]  flex justify-center items-center tracking-[0.5px] hover:bg-[#60ABFF]"
         onClick={handleSearch}
       >
         Search

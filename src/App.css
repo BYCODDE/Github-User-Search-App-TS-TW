@@ -6,3 +6,10 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
 }
+.filtered-svg:hover{
+filter: invert(12%) sepia(8%) saturate(1862%) hue-rotate(182deg) brightness(0%) contrast(90%);
+}
+
+.filtered-svgTwo:hover{
+  filter: invert(84%) sepia(10%) saturate(5679%) hue-rotate(185deg) brightness(119%) contrast(84%);
+}
