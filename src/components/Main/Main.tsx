@@ -15,7 +15,7 @@ function Main({ darkMode, data }: MainProps) {
     <main
       className={`${
         darkMode ? "bg-[#1E2A47]  " : "bg-[#FEFEFE] shadow-custom  "
-      } rounded-[15px]   py-[32px] px-[24px] md:h-[481px] `}
+      } rounded-[15px]   py-[32px] px-[24px] md:h-[481px] xl:max-w-[730px]`}
     >
       <div className="flex justify-start	 text-left	items-center	 gap-[20px] md:gap-[41px]">
         <img
@@ -112,7 +112,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.location === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center  md:justify-center`}
+          } flex gap-[20px] items-center  md:justify-center md:text-[15px]`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}
@@ -131,7 +131,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.blog === "" ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center  md:justify-center`}
+          } flex gap-[20px] items-center  md:justify-center md:text-[15px]`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}
@@ -149,7 +149,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.twitter_username === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center  md:justify-center`}
+          } flex gap-[20px] items-center  md:justify-center md:text-[15px]`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}
@@ -169,7 +169,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.company === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center md:justify-center`}
+          } flex gap-[20px] items-center md:justify-center  md:text-[15px]`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}

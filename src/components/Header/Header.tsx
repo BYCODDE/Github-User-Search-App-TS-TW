@@ -15,7 +15,7 @@ function Header({
   handleSearch,
 }: HeaderProps) {
   return (
-    <header className="">
+    <header className="xl:max-w-[730px] xl:w-full">
       <div className="flex items-center text-center mb-[53px] justify-between">
         <h1
           className={`${
