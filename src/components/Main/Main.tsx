@@ -15,7 +15,7 @@ function Main({ darkMode, data }: MainProps) {
     <main
       className={`${
         darkMode ? "bg-[#1E2A47]  " : "bg-[#FEFEFE] shadow-custom  "
-      } rounded-[15px]   py-[32px] px-[24px] `}
+      } rounded-[15px]   py-[32px] px-[24px] md:h-[481px] `}
     >
       <div className="flex justify-start	 text-left	items-center	 gap-[20px] md:gap-[41px]">
         <img
@@ -44,7 +44,7 @@ function Main({ darkMode, data }: MainProps) {
           </h3>
         </div>
       </div>
-      <div className="flex justify-center items-center flex-col">
+      <div className="flex justify-between items-center flex-col ">
         <p
           className={`${
             darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
@@ -56,7 +56,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             darkMode ? "  bg-[#141D2F]  " : " bg-[#F6F8FF] "
-          } flex justify-center items-center rounded-[10px] p-[15px] gap-[25px] mt-[23px] mb-[24px] text-[16px]`}
+          } flex justify-around items-center rounded-[10px] p-[15px] gap-[25px] mt-[23px] mb-[24px] text-[16px] w-full max-w-[279px] md:max-w-[493px]`}
         >
           <div className="flex flex-col">
             <span
@@ -108,11 +108,11 @@ function Main({ darkMode, data }: MainProps) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start  gap-[7px]">
+      <div className="flex flex-col items-start  gap-[7px]  md:grid md:grid-cols-2 md:grid-rows-2 md:gap-[17px]">
         <div
           className={`${
             data?.location === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center`}
+          } flex gap-[20px] items-center  md:justify-center`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}
@@ -123,7 +123,7 @@ function Main({ darkMode, data }: MainProps) {
           <p
             className={`${
               darkMode ? "  text-[#FFF]  " : " text-[#4B6A9B] "
-            }  font-[400] ml-[5px]`}
+            }  font-[400] ml-[5px] md:ml-0`}
           >
             {data?.location === null ? "Not Available" : data?.location}
           </p>
@@ -131,7 +131,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.blog === "" ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center`}
+          } flex gap-[20px] items-center  md:justify-center`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}
@@ -149,7 +149,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.twitter_username === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center`}
+          } flex gap-[20px] items-center  md:justify-center`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}
@@ -169,7 +169,7 @@ function Main({ darkMode, data }: MainProps) {
         <div
           className={`${
             data?.company === null ? "opacity-[0.5]" : ""
-          } flex gap-[20px] items-center`}
+          } flex gap-[20px] items-center md:justify-center`}
         >
           <img
             className={darkMode ? "filtered-element" : ""}
