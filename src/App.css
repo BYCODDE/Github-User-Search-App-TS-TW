@@ -1,0 +1,8 @@
+.filtered-element {
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(314deg) brightness(101%) contrast(101%);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
