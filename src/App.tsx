@@ -39,7 +39,7 @@ function App() {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
-  async function fechData() {
+  async function fetchData() {
     const response = await fetch("https://api.github.com/users/octocat");
     const result = await response.json();
     setData(result);
@@ -47,7 +47,7 @@ function App() {
   }
 
   useEffect(() => {
-    fechData();
+    fetchData();
   }, []);
 
   return (
