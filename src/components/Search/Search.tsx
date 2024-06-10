@@ -29,6 +29,9 @@ function Search({ darkMode, setUsername, handleSearch }: SearchProps) {
         } w-[100%] placeholder:text-[14px]  placeholder:font-[400]  focus:outline-none  caret-[#0079FF] appearance-none`}
         onChange={handleChange}
       />
+
+      <p className=" text-[#F74646]    whitespace-nowrap">No results</p>
+
       <button
         className="text-[14px] text-[#FFF] bg-[#0079FF] rounded-[10px] p-4  w-[84px]  h-[46px]  flex justify-center items-center tracking-[0.5px] hover:bg-[#60ABFF]"
         onClick={handleSearch}

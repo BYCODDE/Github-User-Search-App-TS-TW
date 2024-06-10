@@ -24,7 +24,7 @@ function Header({
         >
           devfinder
         </h1>
-
+          
         {darkMode ? (
           <div
             className="flex justify-center align-center gap-[16px] cursor-pointer"
