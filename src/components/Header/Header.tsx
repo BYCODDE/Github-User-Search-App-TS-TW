@@ -6,6 +6,7 @@ type HeaderProps = {
   Username: string;
   setUsername: React.Dispatch<React.SetStateAction<string>>;
   handleSearch: () => void;
+  noResult: boolean;
 };
 
 function Header({
@@ -13,6 +14,7 @@ function Header({
   darkMode,
   setUsername,
   handleSearch,
+  noResult,
 }: HeaderProps) {
   return (
     <header className="xl:max-w-[730px] xl:w-full">
@@ -24,7 +26,7 @@ function Header({
         >
           devfinder
         </h1>
-          
+
         {darkMode ? (
           <div
             className="flex justify-center align-center gap-[16px] cursor-pointer"
@@ -60,6 +62,7 @@ function Header({
         darkMode={darkMode}
         setUsername={setUsername}
         handleSearch={handleSearch}
+        noResult={noResult}
       />
     </header>
   );

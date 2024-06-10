@@ -38,16 +38,19 @@ function App() {
   const [data, setData] = useState<dataTypes | null>(null);
   const [Username, setUsername] = useState<string>("BYCODDE");
   const [search, setSearch] = useState<boolean>(false);
-
+const [noResult, setNoResult] = useState<boolean>(true);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
   async function fetchData() {
     const response = await fetch(`https://api.github.com/users/${Username}`);
     const result = await response.json();
-    
+
     if (result.login) {
       setData(result);
+    }
+    else{
+      setNoResult(false);
     }
   }
 
@@ -71,6 +74,7 @@ function App() {
         Username={Username}
         setUsername={setUsername}
         handleSearch={handleSearch}
+        noResult={noResult}
       />
       <Main darkMode={darkMode} toggleDarkMode={toggleDarkMode} data={data} />
     </div>
